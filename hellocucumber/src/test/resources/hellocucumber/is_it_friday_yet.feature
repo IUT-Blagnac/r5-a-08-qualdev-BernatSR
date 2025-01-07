@@ -1,13 +1,3 @@
-= R5.A.08 -- Dépôt pour les TPs
-:icons: font
-
-Ce dépôt concerne les rendus de mailto:bernat.soldevila-rivas@etu.univ-tlse2.fr[Bernat SOLDEVILA RIVAS].
-
-== TP1
-
-.TP1
-[source,java]
----
 Feature: Is it Friday yet?
   Everybody wants to know when it's Friday
 
@@ -21,10 +11,3 @@ Feature: Is it Friday yet?
       | Friday         | TGIF   |
       | Sunday         | Nope   |
       | anything else! | Nope   |
-
----
-
-.Exemple d'image insérée en asciidoc
-image::result_tp1.png[width=80%]
-
-== TP2...
