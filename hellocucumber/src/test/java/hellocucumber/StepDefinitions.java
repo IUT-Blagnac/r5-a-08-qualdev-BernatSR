@@ -1,13 +1,9 @@
 package hellocucumber;
 
 import io.cucumber.java.en.*;
-import io.cucumber.java.fr.Alors;
-import io.cucumber.java.fr.Etantdonnéque;
-import io.cucumber.java.fr.Quand;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Assertions.*;
 
 public class StepDefinitions {
 

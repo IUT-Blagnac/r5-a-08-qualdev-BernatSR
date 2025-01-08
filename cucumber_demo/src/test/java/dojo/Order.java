@@ -1,37 +1,3 @@
-= R5.A.08 -- Dépôt pour les TPs
-:icons: font
-
-Ce dépôt concerne les rendus de mailto:bernat.soldevila-rivas@etu.univ-tlse2.fr[Bernat SOLDEVILA RIVAS].
-
-== TP1
-
-.TP1
-[source,java]
----
-Feature: Is it Friday yet?
-  Everybody wants to know when it's Friday
-
-  Scenario Outline: Checking if today is Friday
-    Given today is "<day>"
-    When I ask whether it's Friday yet
-    Then I should be told "<answer>"
-
-    Examples:
-      | day            | answer |
-      | Friday         | TGIF   |
-      | Sunday         | Nope   |
-      | anything else! | Nope   |
-
----
-
-.Résultat d'éxecution
-image::result_tp1.png[width=80%]
-
-== TP2
-
-.TP2
-[source,java]
----
 package dojo;
 
 import java.util.ArrayList;
@@ -76,8 +42,3 @@ public class Order {
         this.cocktails.add(cocktail);
     }
 }
-
-.Résultat d'éxecution
-image::result_tp2.png[width=80%]
-
----

@@ -1,37 +1,3 @@
-= R5.A.08 -- Dépôt pour les TPs
-:icons: font
-
-Ce dépôt concerne les rendus de mailto:bernat.soldevila-rivas@etu.univ-tlse2.fr[Bernat SOLDEVILA RIVAS].
-
-== TP1
-
-.TP1
-[source,java]
----
-Feature: Is it Friday yet?
-  Everybody wants to know when it's Friday
-
-  Scenario Outline: Checking if today is Friday
-    Given today is "<day>"
-    When I ask whether it's Friday yet
-    Then I should be told "<answer>"
-
-    Examples:
-      | day            | answer |
-      | Friday         | TGIF   |
-      | Sunday         | Nope   |
-      | anything else! | Nope   |
-
----
-
-.Résultat d'éxecution
-image::result_tp1.png[width=80%]
-
-== TP2
-
-.TP2
-[source,java]
----
 package dojo;
 
 import java.util.ArrayList;
@@ -47,22 +13,27 @@ public class Order {
         this.cocktails = new ArrayList<>();
     }
 
+    // Déclare le propriétaire de la commande
     public void declareOwner(String name) {
         this.owner = name;
     }
 
+    // Déclare la personne cible de la commande
     public void declareTarget(String name) {
         this.target = name;
     }
 
+    // Ajoute un message à la commande
     public void addMessage(String msg) {
         this.message = msg;
     }
 
+    // Récupère la liste des cocktails dans la commande
     public List<String> getCocktails() {
         return cocktails;
     }
 
+    // Génère le ticket de la commande
     public String generateTicket() {
         StringBuilder ticket = new StringBuilder();
         ticket.append("From ").append(owner).append(" to ").append(target).append(": ");
@@ -72,12 +43,8 @@ public class Order {
         return ticket.toString();
     }
 
+    // Optionnel: Ajoute un cocktail à la commande
     public void addCocktail(String cocktail) {
         this.cocktails.add(cocktail);
     }
 }
-
-.Résultat d'éxecution
-image::result_tp2.png[width=80%]
-
----
