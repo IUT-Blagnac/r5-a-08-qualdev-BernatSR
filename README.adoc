@@ -10,12 +10,10 @@ Ce dépôt concerne les rendus de mailto:bernat.soldevila-rivas@etu.univ-tlse2.f
 ---
 Feature: Is it Friday yet?
   Everybody wants to know when it's Friday
-
   Scenario Outline: Checking if today is Friday
     Given today is "<day>"
     When I ask whether it's Friday yet
     Then I should be told "<answer>"
-
     Examples:
       | day            | answer |
       | Friday         | TGIF   |
@@ -31,38 +29,30 @@ image::result_tp1.png[width=80%]
 
 .TP2
 [source,java]
----
-package dojo;
 
+package dojo;
 import java.util.ArrayList;
 import java.util.List;
-
 public class Order {
     private String owner;
     private String target;
     private List<String> cocktails;
     private String message;
-
     public Order() {
         this.cocktails = new ArrayList<>();
     }
-
     public void declareOwner(String name) {
         this.owner = name;
     }
-
     public void declareTarget(String name) {
         this.target = name;
     }
-
     public void addMessage(String msg) {
         this.message = msg;
     }
-
     public List<String> getCocktails() {
         return cocktails;
     }
-
     public String generateTicket() {
         StringBuilder ticket = new StringBuilder();
         ticket.append("From ").append(owner).append(" to ").append(target).append(": ");
@@ -71,13 +61,12 @@ public class Order {
         }
         return ticket.toString();
     }
-
     public void addCocktail(String cocktail) {
         this.cocktails.add(cocktail);
     }
 }
 
+
 .Résultat d'éxecution
 image::result_tp2.png[width=80%]
 
----
